@@ -4,9 +4,9 @@ var computerSelection;
 playerSelection = window.prompt("Welcome to the Game! Please choose Rock, Paper or Scissors");
 console.log(playerSelection);
 
-function playRound(playerSelection, computerSelection) {
+function getComputerSelection() {
   // your code here to determine whether playerSelection or computerSelection wins!
-  const getComputerChoice= () => {
+  const computerSelection= () => {
     const randomNumber = (Math.floor(Math.random() * 3))
     if (randomNumber === 0){
       return 'Rock';
@@ -18,7 +18,7 @@ function playRound(playerSelection, computerSelection) {
     return 'Scissors';
     }
       }
-  console.log(getComputerChoice());
+  console.log(computerSelection());
   
 }
 
