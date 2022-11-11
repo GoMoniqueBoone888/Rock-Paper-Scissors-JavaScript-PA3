@@ -1,15 +1,27 @@
+
 var playerSelection;                                                                
 var getComputerSelection;
 
 
-playerSelection = window.prompt("Welcome to the Game! Please choose Rock, Paper or Scissors");
-console.log(playerSelection);
+//playerSelection = window.prompt("Welcome to the Game! Please choose Rock, Paper or Scissors");
+//console.log(playerSelection);
+
+function getComputerNumber(numOptions){
+   var number;
+   number = Math.random();
+   //console.log(number);
+   number = number*numOptions;
+   //console.log(number);
+   number = Math.floor(number);
+   //console.log(number);
+   return number;
+};
+
 
 function getComputerSelection() {
-  // your code here to determine whether playerSelection or computerSelection wins!
-  const getComputerSelection = (Rock, Paper, Scissors) => {
-    const randomNumber = (Math.floor(Math.random() * 3))
-    if (randomNumber === 0){
+   var randomNumber;
+   randomNumber = getComputerNumber(3);
+   if (randomNumber === 0){
       return 'Rock';
     }
     else if (randomNumber === 1){
@@ -17,10 +29,7 @@ function getComputerSelection() {
     }
     else if (randomNumber === 2){
     return 'Scissors';
-    }
-      }
-  console.log(getComputerSelection());
-  
+    }  
 }
 
 
@@ -55,6 +64,8 @@ function playRound(playerSelection, getComputerSelection) {
 }
 
 
+getComputerSelection();
+let computer = getComputerSelection();
 
 function game() {
   //Play game 3 times
