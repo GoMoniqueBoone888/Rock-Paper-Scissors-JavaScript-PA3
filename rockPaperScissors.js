@@ -7,7 +7,7 @@ console.log(playerSelection);
 
 function getComputerSelection() {
   // your code here to determine whether playerSelection or computerSelection wins!
-  const getComputerSelection = () => {
+  const getComputerSelection = (Rock, Paper, Scissors) => {
     const randomNumber = (Math.floor(Math.random() * 3))
     if (randomNumber === 0){
       return 'Rock';
